@@ -7,20 +7,12 @@
   <body>
     <header class="'main-header">
       <div class="container">
-        <div class="index-logo">
-          <img src="http://placehold.it/150x100" width="154" height="64" alt="Gllacy Shop">
-        </div>
+        <a class="index-logo" href="index.html"><h1>Gllacy Shop</h1></a>
         <nav class="main-navigation">
           <ul>
-            <li>
-              <a href="#">Каталог</a>
-            </li>
-            <li>
-              <a href="#">Доставка и оплата</a>
-            </li>
-            <li>
-              <a href="#">О Компании</a>
-            </li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О Компании</a></li>
           </ul>
         </nav>
         <div class="user-block">
@@ -40,23 +32,23 @@
     <main class="container">
       <h1 class="main-title">Крем-брюле и пломбир с малиновым джемом</h1>
       <ul class="main-slider">
-        <li>1</li>
+        <li class="slider-active">1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-      <button class="slogan">Давайте оба!</button>
+      <a class="slogan" href="#">Давайте оба!</a>
       <section class="promo">
         <div class="promo-left">
           <h2 class="promo-title">Малинка даром!</h2>
           <p>При покупке 2 кг любого фруктового мороженого, добавим
             в ваш заказ банку малинового варенья бесплатно.</p>
-          <button class="slogan">Хочу варенье!</button>
+          <a class="slogan" href="#">Хочу варенье!</a>
         </div>
         <div class="promo-right">
           <h2 class="promo-title">Шоколадки даром!</h2>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ
             упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <button class="slogan">Хочу варенье!</button>
+          <a class="slogan" href="#">Хочу шоколадки!</a>
         </div>
       </section>
       <div class="popular-goods">
@@ -114,23 +106,25 @@
       <div class="map">
         <img src="http://placehold.it/150x100" width="1200" height="430" alt="Карта проезда">
       </div>
-      <div class="main-contacts">
+      <address class="main-contacts">
         <p>Адрес главного офиса и офлайн магазина:
         <span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
         <p>Для заказов по телефону:
           <span>8 812 450-25-25</span>
           (с 10 до 20 ежедневно)</p>
-      </div>
+      </address>
     </main>
   <footer class="main-footer">
     <div class="container">
-      <section class="footer-social">
-        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-      </section>
-      <section class="footer-info">
+      <div class="footer-social">
+        <ul>
+          <li><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
+          <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+          <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+          <li><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
         <div class="footer-info-left">
           <a href="#">Для поставщиков</a>
           <a href="#">О производстве</a>
@@ -139,11 +133,11 @@
           <a href="#">Наши документы</a>
           <a href="#">Экологические стандарты</a>
         </div>
-      </section>
-      <section class="footer-copyright">
-        <img class="footer-logo" src="http://placehold.it/150x100" width="108" height="38">
+      </div>
+      <div class="footer-copyright">
+        <a href="https://htmlacademy.ru">HTML Academy</a>
         <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</p>
-      </section>
+      </div>
     </div>
   </footer>
   </body>
