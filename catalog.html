@@ -7,14 +7,21 @@
 </head>
 <body>
   <header class="main-header">
-    <div class="container">
-      <h2><a class="index-logo" href="index.html">Gllacy Shop</a></h2>
+    <div class="container clearfix">
       <nav class="main-navigation">
+        <h2><a class="index-logo" href="index.html">Gllacy Shop</a></h2>
         <ul>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О Компании</a></li>
         </ul>
+        <div class="shop-breadcrumbs">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li class="breadcrumbs-active"><a href="catalog.html">Сливочное</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="user-block">
         <form class="search">
@@ -30,15 +37,9 @@
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class="container clearfix">
     <div class="catalog">
-      <div class="shop-breadcrumbs">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li class="breadcrumbs-active"><a href="catalog.html">Сливочное</a></li>
-        </ul>
-      </div>
+
       <h1 class="catalog-title">Сливочное мороженое</h1>
       <form class="catalog-filters">
         <fieldset class="catalog-filters-sorting">
@@ -163,7 +164,7 @@
     </div>
   </main>
   <footer class="main-footer">
-    <div class="container">
+    <div class="container clearfix">
       <div class="footer-social">
         <ul>
           <li><a class="social-btn social-btn-tw" href="#">Твиттер</a></li>
@@ -172,7 +173,7 @@
           <li><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
         </ul>
       </div>
-      <div class="footer-info">
+      <div class="footer-info clearfix">
         <div class="footer-info-left">
           <a href="#">Для поставщиков</a>
           <a href="#">О производстве</a>
