@@ -1,4 +1,8 @@
+html,
 body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -6,12 +10,11 @@ body {
   color: #323232;
 }
 
-.main-title {
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
-  font-family: "Roboto Black", sans-serif;
-  color: #ffffff;
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
 }
 
 .promo-title {
@@ -20,4 +23,268 @@ body {
   line-height: 41px;
   font-family: "Roboto Bold", sans-serif;
   color: #ffffff;
+}
+
+.main-header {
+  /*Для выделения блоков*/
+  /*background-color: red;*/
+  /*outline: 1px solid black;*/
+}
+
+.container {
+  /*Для выделения блоков*/
+  /*background-color: lightcyan;*/
+  /*outline: 1px solid black;*/
+
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-navigation {
+  /*Для выделения блоков*/
+  /*background-color: blueviolet;*/
+  /*outline: 1px solid black;*/
+
+  float: left;
+  width: 859px;
+}
+
+.user-block {
+  /*Для выделения блоков*/
+  /*background-color: yellow;*/
+  /*outline: 1px solid black;*/
+
+  float: right;
+  width: 267px;
+}
+
+.header-contacts {
+  /*Для выделения блоков*/
+  /*background-color: blue;*/
+  /*outline: 1px solid black;*/
+
+  float: right;
+  width: 267px;
+}
+
+.main-title {
+  /*Для выделения блоков*/
+  /*background-color: blue;*/
+  /*outline: 1px solid black;*/
+
+  width: 670px;
+  margin-top: 270px;
+  margin-bottom: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "Roboto Black", sans-serif;
+  color: #ffffff;
+}
+
+.main-slider {
+  /*Для выделения блоков*/
+  /*background-color: yellow;*/
+  /*outline: 1px solid black;*/
+
+  margin-bottom: 41px;
+}
+
+.main-slider ul {
+  float: left;
+}
+
+.main-slider .slogan {
+  display: block;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.promo {
+  /*Для выделения блоков*/
+  /*background-color: red;*/
+  /*outline: 1px solid black;*/
+
+  margin-bottom: 41px;
+}
+
+.promo-left {
+  /*Для выделения блоков*/
+  /*background-color: yellow;*/
+  /*outline: 1px solid black;*/
+
+  float: left;
+  width: 560px;
+}
+
+.promo-right {
+  /*Для выделения блоков*/
+  /*background-color: yellow;*/
+  /*outline: 1px solid black;*/
+
+  float: right;
+  width: 560px;
+}
+
+.popular-goods {
+  /*Для выделения блоков*/
+  /*background-color: blue;*/
+  /*outline: 1px solid black;*/
+}
+
+.popular-goods div {
+  float: left;
+  width: 267px;
+  margin-right: 26px;
+}
+
+.popular-goods div:last-child {
+  margin-right: 0;
+}
+
+.features {
+  /*Для выделения блоков*/
+  /*background-color: red;*/
+  /*outline: 1px solid black;*/
+
+  margin-bottom: 40px;
+}
+
+.features-title {
+  margin-bottom: 10px;
+  padding-top: 25px;
+}
+
+.features p {
+  display: inline-block;
+  width: 560px;
+}
+
+.activities {
+  /*Для выделения блоков*/
+  /*background-color: blue;*/
+  /*outline: 1px solid black;*/
+
+  margin-bottom: 40px;
+}
+
+.activities-blog {
+  float: left;
+  width: 560px;
+}
+
+.activities-subscription {
+  float: right;
+  width: 560px;
+}
+
+.map {
+  position: relative;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.map img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-contacts {
+  /*Для выделения блоков*/
+  /*background-color: yellow;*/
+  /*outline: 1px solid black;*/
+
+  position: absolute;
+  top: 63px;
+  right: 27px;
+  /*bottom: ;*/
+  /*left: ;*/
+  float: right;
+  width: 302px;
+}
+
+.main-footer {
+  /*Для выделения блоков*/
+  /*background-color: red;*/
+  /*outline: 1px solid black;*/
+
+  margin-bottom: 0px;
+}
+
+.footer-social {
+  float: left;
+  width: 267px;
+  margin-right: 26px;
+}
+
+.footer-info {
+  float: left;
+  width: 560px;
+}
+
+.footer-info-left {
+  float: left;
+  width: 247px;
+  margin-right: 20px;
+}
+
+.footer-info-right {
+  width: 293px;
+  float: right;
+}
+
+.footer-copyright {
+  float: right;
+  width: 267px;
+}
+
+/*Страница каталога*/
+
+.catalog-title {
+  margin-bottom: 30px;
+}
+
+.catalog-filters {
+  width: 860px;
+}
+
+.catalog-filters fieldset,
+.catalog-filters .btn {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.catalog-filters fieldset:last-child,
+.catalog-filters .btn {
+  margin-bottom: 38px;
+}
+
+.catalog-goods {
+  font-size: 0px;
+}
+
+.catalog-goods div {
+  display: inline-block;
+  width: 267px;
+  margin-right: 26px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.catalog-goods div:nth-child(4),
+.catalog-goods div:nth-child(8),
+.catalog-goods div:nth-child(12) {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.catalog-page-numbers {
+  width: 267px;
+  float: right;
 }
