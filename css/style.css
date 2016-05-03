@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto.woff') format('woff'),
+  url('../fonts/roboto.woff2') format('woff2'),
+  url('../fonts/robotomedium.woff') format('woff'),
+  url('../fonts/robotomedium.woff2') format('woff2');
+}
+
 html,
 body {
   min-width: 1200px;
@@ -6,10 +14,11 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-family: "Roboto Regular", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #323232;
 }
 
+/*Оформление сетки*/
 .clearfix::after {
   content: "";
 
@@ -21,7 +30,7 @@ body {
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
-  font-family: "Roboto Bold", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
 }
 
@@ -81,7 +90,7 @@ body {
   font-weight: 900;
   font-size: 60px;
   line-height: 60px;
-  font-family: "Roboto Black", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
 }
 
@@ -214,7 +223,7 @@ body {
   /*background-color: red;*/
   /*outline: 1px solid black;*/
 
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .footer-social {
@@ -266,7 +275,7 @@ body {
 }
 
 .catalog-goods {
-  font-size: 0px;
+  font-size: 0;
 }
 
 .catalog-goods div {
@@ -277,9 +286,7 @@ body {
   vertical-align: top;
 }
 
-.catalog-goods div:nth-child(4),
-.catalog-goods div:nth-child(8),
-.catalog-goods div:nth-child(12) {
+.catalog-goods div:nth-child(4n) {
   margin-right: 0;
   margin-left: 0;
 }
@@ -288,3 +295,6 @@ body {
   width: 267px;
   float: right;
 }
+
+/*Оформление декоративных элементов*/
+
