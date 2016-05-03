@@ -54,6 +54,7 @@ body {
   padding: 0 27px;
 }
 
+/*Почему перестала работать ссылка?*/
 .index-logo {
   position: absolute;
   width: 154px;
@@ -95,6 +96,25 @@ body {
   border-radius: 15px 15px 15px 15px;
 }
 
+.main-navigation a:active {
+  font-weight: 700;
+
+  color: #333333;
+  background-color: #f7f6f3;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: inset 0 1px 2px #696969;
+}
+.main-navigation-active {
+  font-weight: 700;
+
+  background-color: #d07058;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.main-navigation-active span {
+  border: none;
+}
+
 .main-navigation ul {
   margin: 0;
   margin-left: 163px;
@@ -119,8 +139,12 @@ body {
   /*outline: 1px solid black;*/
 
   float: right;
-  width: 267px;
+  /*max-width: 267px;*/
 }
+
+/*.user-block a {*/
+
+/*}*/
 
 .header-contacts {
   /*Для выделения блоков*/
