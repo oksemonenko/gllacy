@@ -11,11 +11,14 @@ body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
+  
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   font-family: "Roboto", "Arial", sans-serif;
+
   color: #323232;
+  background: #849d8f;
 }
 
 /*Оформление сетки*/
@@ -38,6 +41,7 @@ body {
   /*Для выделения блоков*/
   /*background-color: red;*/
   /*outline: 1px solid black;*/
+  color: #ffffff;
 }
 
 .container {
@@ -50,13 +54,63 @@ body {
   padding: 0 27px;
 }
 
+.index-logo {
+  position: absolute;
+  width: 154px;
+  height: 64px;
+  padding: 0;
+
+  font-size: 0;
+
+  background: url("../img/Logo.svg") no-repeat;
+}
+
 .main-navigation {
   /*Для выделения блоков*/
   /*background-color: blueviolet;*/
   /*outline: 1px solid black;*/
+  position: relative;
 
   float: left;
   width: 859px;
+}
+
+.main-navigation a {
+  display: block;
+  padding: 7px 13px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-navigation span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-navigation a:hover {
+  font-weight: 700;
+
+  color: #333333;
+  background-color: #f7f6f3;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.main-navigation ul {
+  margin: 0;
+  margin-left: 163px;
+  padding: 0;
+
+  list-style: none;
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+  padding: 15px 1px;
+
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: top;
 }
 
 .user-block {
