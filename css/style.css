@@ -41,6 +41,7 @@ body {
   /*Для выделения блоков*/
   /*background-color: red;*/
   /*outline: 1px solid black;*/
+  font-weight: 700;
   color: #ffffff;
 }
 
@@ -91,7 +92,7 @@ body {
 .main-navigation a:hover {
   font-weight: 700;
 
-  color: #333333;
+  color: #373737;
   background-color: #f7f6f3;
   border-radius: 15px 15px 15px 15px;
 }
@@ -99,7 +100,7 @@ body {
 .main-navigation a:active {
   font-weight: 700;
 
-  color: #333333;
+  color: #373737;
   background-color: #f7f6f3;
   border-radius: 15px 15px 15px 15px;
   box-shadow: inset 0 1px 2px #696969;
@@ -140,19 +141,57 @@ body {
 
   float: right;
   max-width: 267px;
+  padding-top: 15px;
 }
 
 .user-block a {
+  position: relative;
   display: inline-block;
   padding: 7px 13px;
+  padding-left: 45px;
 
+  font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  vertical-align: top;
 
   color: #ffffff;
   background: rgba(161, 180, 169, 0.8);
   border-radius: 15px 15px 15px 15px;
   text-decoration: none;
+}
+
+.login:hover {
+  color: #373737;
+  background: #f8f7f4;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 15px;
+
+  width: 21px;
+  height: 19px;
+
+  background: url("../img/login.svg") no-repeat;
+}
+
+.login:hover::before {
+  background: url("../img/login-hover.svg");
+}
+
+.cart::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 15px;
+
+  width: 21px;
+  height: 19px;
+
+  background: url("../img/cart.svg") no-repeat;
 }
 
 .search {
@@ -161,6 +200,11 @@ body {
   height: 33px;
   background: rgba(161, 180, 169, 0.8) url("../img/search.svg") no-repeat center;
   border-radius: 50%;
+}
+
+.search:hover {
+  color: #373737;
+  background: #f8f7f4 url("../img/search-hover.svg") no-repeat center;
 }
 
 .search input{
@@ -174,6 +218,18 @@ body {
 
   float: right;
   width: 267px;
+}
+
+.header-contacts span {
+  display: block;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.header-contacts span:last-child {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 24px;
 }
 
 .main-title {
@@ -208,8 +264,35 @@ body {
 .main-slider .slogan {
   display: block;
   width: 280px;
+  padding: 10px 0;
   margin-right: auto;
   margin-left: auto;
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background:
+          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  border-radius: 28px 28px 28px 28px;
+  text-decoration: none;
+}
+
+.main-slider .slogan:hover {
+  background:
+          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 2px 0 #ac1000;
 }
 
 .promo {
