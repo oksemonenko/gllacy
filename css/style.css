@@ -29,14 +29,6 @@ body {
   clear: both;
 }
 
-.promo-title {
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 41px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #ffffff;
-}
-
 .main-header {
   /*Для выделения блоков*/
   /*background-color: red;*/
@@ -284,6 +276,7 @@ body {
   text-decoration: none;
 }
 
+/*Как оформить градиент при наведении?*/
 .main-slider .slogan:hover {
   background:
           -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
@@ -301,7 +294,16 @@ body {
   /*outline: 1px solid black;*/
 
   margin-bottom: 41px;
+  font-weight: 700;
+  color: #ffffff;
 }
+
+/*.promo div {*/
+  /*width: 560px;*/
+  /*height: 229px;*/
+  /*padding: 20px;*/
+  /*background: #373737 no-repeat;*/
+/*}*/
 
 .promo-left {
   /*Для выделения блоков*/
@@ -309,7 +311,11 @@ body {
   /*outline: 1px solid black;*/
 
   float: left;
+  box-sizing: border-box;
   width: 560px;
+  height: 229px;
+  padding: 20px;
+  background: url("../img/strawberry.png") no-repeat;
 }
 
 .promo-right {
@@ -318,7 +324,41 @@ body {
   /*outline: 1px solid black;*/
 
   float: right;
+  box-sizing: border-box;
   width: 560px;
+  height: 229px;
+  padding: 20px;
+  background: url("../img/chocolate.png") no-repeat;
+}
+
+.promo-title {
+  margin: 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.promo p {
+  font-size: 18px;
+  /*Уточнить!*/
+  line-height: 24px;
+  text-align: left;
+}
+
+.promo .slogan {
+  float: right;
+  /*width: 165px;*/
+  padding: 13px 23px;
+  color: #ffffff;
+  background:
+          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  border-radius: 28px 28px 28px 28px;
+  text-decoration: none;
 }
 
 .popular-goods {
