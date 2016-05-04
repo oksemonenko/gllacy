@@ -139,12 +139,33 @@ body {
   /*outline: 1px solid black;*/
 
   float: right;
-  /*max-width: 267px;*/
+  max-width: 267px;
 }
 
-/*.user-block a {*/
+.user-block a {
+  display: inline-block;
+  padding: 7px 13px;
 
-/*}*/
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+  background: rgba(161, 180, 169, 0.8);
+  border-radius: 15px 15px 15px 15px;
+  text-decoration: none;
+}
+
+.search {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background: rgba(161, 180, 169, 0.8) url("../img/search.svg") no-repeat center;
+  border-radius: 50%;
+}
+
+.search input{
+  display: none;
+}
 
 .header-contacts {
   /*Для выделения блоков*/
