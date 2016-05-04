@@ -9,7 +9,7 @@
 html,
 body {
   min-width: 1200px;
-  margin: 0;
+  margin: -10px;
   padding: 0;
   
   font-weight: 400;
@@ -19,6 +19,10 @@ body {
 
   color: #323232;
   background: #849d8f;
+}
+/*Как убрать отступ?*/
+body {
+  margin: -10px;
 }
 
 /*Оформление сетки*/
@@ -340,8 +344,7 @@ body {
 
 .promo p {
   font-size: 18px;
-  /*Уточнить!*/
-  line-height: 24px;
+  line-height: 22px;
   text-align: left;
 }
 
@@ -375,6 +378,50 @@ body {
 
 .popular-goods div:last-child {
   margin-right: 0;
+}
+
+.popular-goods > div {
+  position: relative;
+}
+
+.popular-goods > div::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: #ffffff url("../img/hit.png") no-repeat;
+  border-radius: 50%;
+}
+
+.popular-goods p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  /*Как задать подчеркивание?*/
+  /*text-decoration-line: underline;*/
+  /*text-decoration-color: rgba(255, 255, 255, 0.2);*/
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2)*/
+}
+
+.price {
+  position: absolute;
+  top: 210px;
+  font-weight: 700;
+  font-size: 0;
+  line-height: 45px;
+  color: #ffffff;
+}
+
+.price-rub {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.price-kg {
+  font-size: 30px;
 }
 
 .features {
