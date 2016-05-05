@@ -9,7 +9,7 @@
 html,
 body {
   min-width: 1200px;
-  margin: -10px;
+  margin: 0;
   padding: 0;
   
   font-weight: 400;
@@ -20,9 +20,11 @@ body {
   color: #323232;
   background: #849d8f;
 }
-/*Как убрать отступ?*/
-body {
-  margin: -10px;
+
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
 /*Оформление сетки*/
@@ -90,7 +92,7 @@ body {
 
   color: #373737;
   background-color: #f7f6f3;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
 }
 
 .main-navigation a:active {
@@ -98,14 +100,14 @@ body {
 
   color: #373737;
   background-color: #f7f6f3;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   box-shadow: inset 0 1px 2px #696969;
 }
 .main-navigation-active {
   font-weight: 700;
 
   background-color: #d07058;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
 }
 
 .main-navigation-active span {
@@ -153,7 +155,7 @@ body {
 
   color: #ffffff;
   background: rgba(161, 180, 169, 0.8);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   text-decoration: none;
 }
 
@@ -276,7 +278,7 @@ body {
           -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
           linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-  border-radius: 28px 28px 28px 28px;
+  border-radius: 28px;
   text-decoration: none;
 }
 
@@ -360,7 +362,7 @@ body {
           -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
           linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-  border-radius: 28px 28px 28px 28px;
+  border-radius: 28px;
   text-decoration: none;
 }
 
@@ -412,12 +414,26 @@ body {
   font-size: 0;
   line-height: 45px;
   color: #ffffff;
+  text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .price-rub {
+  padding-right: 30px;
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
+}
+
+.price-rub::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 27px;
+  height: 32px;
+  /*Уже вместе с тенью*/
+  background: url("../img/rub.png");
+  /*Почему не работает тень?*/
+  /*filter: drop-shadow(0 1px 3px rgba(49, 50, 53, 0.5));*/
 }
 
 .price-kg {
@@ -430,34 +446,99 @@ body {
   /*outline: 1px solid black;*/
 
   margin-bottom: 40px;
+  background: url("../img/wafer-pattern.jpg");
+  border-radius: 12px;
 }
 
 .features-title {
   margin-bottom: 10px;
   padding-top: 25px;
+  padding-left: 21px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
 }
 
 .features p {
+  position: relative;
   display: inline-block;
+  box-sizing: border-box;
   width: 560px;
+  padding-left: 76px;
+  vertical-align: top;
 }
 
-.activities {
+.features p::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 49px;
+  height: 49px;
+  /*background: #ffffff;*/
+}
+
+.features p:nth-of-type(1)::before {
+  background: url("../img/icon-ice-cream.svg");
+}
+
+.features p:nth-of-type(2)::before {
+  background: url("../img/icon-cow.png");
+}
+
+.features p:nth-of-type(3)::before {
+  background: url("../img/icon-leaf.svg");
+}
+
+.features p:nth-of-type(4)::before {
+  background: url("../img/icon-thermometer.svg");
+}
+
+
+.activities div {
   /*Для выделения блоков*/
   /*background-color: blue;*/
   /*outline: 1px solid black;*/
 
+  width: 560px;
+  height: 220px;
   margin-bottom: 40px;
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 
 .activities-blog {
   float: left;
-  width: 560px;
+  padding-left: 20px;
+  background: url("../img/strawberry-background.jpg") no-repeat;
+}
+
+.activities-blog h3 {
+  padding-top: 24px;
+  padding-bottom: 9px;
+}
+
+.activities-blog a {
+  display: block;
+  padding-right: 256px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
 }
 
 .activities-subscription {
   float: right;
-  width: 560px;
+  padding-left: 28px;
+  background: url("../img/post-border-background.png");
+  /*background: #f8f7f4;*/
+  /*border-style: solid;*/
+  /*border-width: 6px 6px 6px 6px;*/
+  /*-moz-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
+  /*-webkit-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
+  /*-o-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
+  /*border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
 }
 
 .map {
