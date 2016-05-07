@@ -608,7 +608,6 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
 }
 
 .map img {
@@ -686,14 +685,16 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   /*outline: 1px solid black;*/
 
   margin-bottom: 0;
+  padding-top: 18px;
+  padding-bottom: 25px;
 }
 
 .footer-social {
   position: relative;
   float: left;
   width: 267px;
-  margin-right: 100px;
-  margin-top: 6px;
+  margin-right: 26px;
+  padding-top: 17px;
 }
 
 .footer-social ul {
@@ -741,7 +742,8 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
 .footer-info {
   float: left;
   width: 560px;
-  padding-top: 3px;
+  margin-right: 26px;
+  padding-top: 15px;
 }
 
 .footer-info a {
@@ -771,19 +773,46 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
 
 .footer-info-left {
   float: left;
-  margin-right: 0px;
-  padding-left: 55px;
+  margin-right: 0;
+  padding-left: 129px;
 }
 
 .footer-info-right {
   float: right;
-  width: 293px;
-  margin-right: 70px;
+  padding-right: 127px;
 }
 
 .footer-copyright {
   float: right;
   width: 267px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  color:  #fefefe;
+}
+
+.footer-copyright-logo {
+  display: block;
+  width: 108px;
+  height: 38px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 0;
+
+  background: url("../img/html-academy.svg") no-repeat;
+}
+
+.footer-copyright p {
+  margin-left: 77px;
+  margin-top: 4px;
+}
+
+.footer-copyright p a {
+  color:  #fefefe;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 /*Страница каталога*/
