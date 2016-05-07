@@ -279,10 +279,10 @@ h3 {
   color: #ffffff;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
   background:
-          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
           linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 28px;
@@ -292,10 +292,10 @@ h3 {
 /*Как оформить градиент при наведении?*/
 .main-slider .slogan:hover {
   background:
-          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
           linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 2px 2px 0 #ac1000;
@@ -369,11 +369,11 @@ h3 {
   line-height: 24px;
   color: #ffffff;
   background:
-          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+/*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+/*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+/*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 28px;
   text-decoration: none;
@@ -593,10 +593,10 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   line-height: 24px;
   color: #fefefe;
   background:
-          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-          -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
           linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 18px;
@@ -668,11 +668,11 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   line-height: 24px;
   text-align: center;
   background:
-          -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
--ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
-linear-gradient(0deg, #e74a35 0%, #f26843 100%);
+          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
+          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
   border-radius: 20px;
   color: #fefefe;
@@ -911,6 +911,16 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
   background-color: rgba(248, 247, 244, 0.2);
   border: none;
   border-radius: 20px;
+  /*скрытие стрелки*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  /*Нужно вставить стрелку*/
+}
+/*Скрытие стрелки в селекте для IE*/
+.catalog-filters-sorting select::-ms-expand {
+  display: none;
 }
 
 .toogle-1,
