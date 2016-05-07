@@ -7,7 +7,7 @@
   <link href="css/normalize.css" rel="stylesheet" >
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
   <header class="main-header">
     <div class="container clearfix">
       <h2><a class="index-logo" href="index.html">Gllacy Shop</a></h2>
@@ -31,7 +31,7 @@
           <input type="submit" value="Найти">
         </form>
         <a class="login" href="#">Вход</a>
-        <a class="cart" href="#">Корзина</a>
+        <a class="cart" href="#">2 товара</a>
       </div>
       <div class="header-contacts">
         <span>С 10 до 20, ежедневно</span>
@@ -41,7 +41,6 @@
   </header>
   <main class="container clearfix">
     <div class="catalog">
-
       <h1 class="catalog-title">Сливочное мороженое</h1>
       <form class="catalog-filters">
         <fieldset class="catalog-filters-sorting">
@@ -52,7 +51,8 @@
         </fieldset>
         <fieldset class="catalog-filters-price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <input type="range" min="100" max="500" name="price" id="price">
+          <div class="toogle-1"><div class="toogle-2"></div></div>
+          <!--<input type="range" min="100" max="500" name="price" id="price">-->
         </fieldset>
         <fieldset class="catalog-filters-fatness">
           <legend>Жирность</legend>
@@ -186,7 +186,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="footer-copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
         <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</p>
       </div>
     </div>

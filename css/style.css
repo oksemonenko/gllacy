@@ -817,23 +817,152 @@ linear-gradient(0deg, #e74a35 0%, #f26843 100%);
 
 /*Страница каталога*/
 
+.inner-page .cart {
+  color: #323232;
+  background: #f8f7f4;
+}
+
+.inner-page .cart::before {
+  background: url("../img/cart-full.png") no-repeat;
+}
+
+.shop-breadcrumbs {
+  padding-top: 22px;
+}
+
+.shop-breadcrumbs ul,
+.shop-breadcrumbs li {
+  margin: 0;
+  padding: 0;
+}
+
+.shop-breadcrumbs a {
+  position: relative;
+  padding-left: 0;
+  padding-right: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.shop-breadcrumbs a::after {
+  content: "»";
+  position: absolute;
+  right: 6px;
+}
+
+.breadcrumbs-active a::after {
+  display: none;
+}
+
 .catalog-title {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
+  color:  #ffffff;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: left;
 }
 
 .catalog-filters {
   width: 860px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color:  #ffffff;
 }
 
 .catalog-filters fieldset,
 .catalog-filters .btn {
   display: inline-block;
+  margin: 0;
   margin-bottom: 12px;
+  margin-right: 10px;
+  padding: 0;
+  vertical-align: top;
+  border: none;
 }
 
 .catalog-filters fieldset:last-child,
 .catalog-filters .btn {
   margin-bottom: 38px;
+}
+
+.catalog-filters legend {
+  margin-bottom: 7px;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.catalog-filters-sorting select {
+  width: 194px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  text-transform: lowercase;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  color: #ffffff;
+  background-color: rgba(248, 247, 244, 0.2);
+  border: none;
+  border-radius: 20px;
+}
+
+.toogle-1,
+.toogle-2 {
+  position: relative;
+}
+
+.toogle-1 {
+  width: 220px;
+  height: 36px;
+  background-color:  rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.toogle-1::before,
+.toogle-1::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  height: 4px;
+}
+
+.toogle-1::before {
+  left: 15px;
+  width: 188px;
+  background-color:  rgba(248, 247, 244, 0.5);
+}
+
+.toogle-1::after {
+  left: 45px;
+  width: 107px;
+  background-color:  #f8f7f4;
+}
+
+.toogle-2::before,
+.toogle-2::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 21px;
+  height: 21px;
+  background-color:  #f8f7f4;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.toogle-2::before {
+  left: 35px;
+}
+
+.toogle-2::after {
+  left: 133px;
 }
 
 .catalog-goods {
