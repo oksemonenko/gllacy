@@ -36,25 +36,17 @@ h3 {
 }
 
 .main-header {
-  /*Для выделения блоков*/
-  /*background-color: red;*/
-  /*outline: 1px solid black;*/
   font-weight: 700;
   color: #ffffff;
 }
 
 .container {
-  /*Для выделения блоков*/
-  /*background-color: lightcyan;*/
-  /*outline: 1px solid black;*/
-
   position: relative;
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
 }
 
-/*Почему перестала работать ссылка?*/
 .index-logo {
   position: absolute;
   top: 10px;
@@ -69,10 +61,6 @@ h3 {
 }
 
 .main-navigation {
-  /*Для выделения блоков*/
-  /*background-color: blueviolet;*/
-  /*outline: 1px solid black;*/
-
   float: left;
   width: 859px;
   padding-top: 8px;
@@ -108,7 +96,7 @@ h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.main-navigation a:hover {
+.main-navigation-list a:hover {
   font-weight: 700;
 
   color: #373737;
@@ -419,18 +407,23 @@ h3 {
   border-radius: 50%;
 }
 
+.popular-goods a,
+.catalog-goods a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
 .popular-goods p,
 .catalog-goods p {
+  display: inline;
   margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: #ffffff;
-  /*Как задать подчеркивание?*/
-  /*text-decoration-line: underline;*/
-  /*text-decoration-color: rgba(255, 255, 255, 0.2);*/
-  /*border-bottom: 1px solid rgba(255, 255, 255, 0.2)*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .price {
@@ -756,6 +749,11 @@ h3 {
   line-height: 18px;
   text-align: left;
   color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-info span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-info-left a:first-of-type {
@@ -815,8 +813,12 @@ h3 {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  text-decoration: none;
 }
 
+.footer-copyright span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 /*Страница каталога*/
 
 .inner-page .cart {
@@ -831,6 +833,10 @@ h3 {
 /*Хлебные крошки*/
 .shop-breadcrumbs {
   padding-top: 22px;
+}
+
+.shop-breadcrumbs span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .shop-breadcrumbs ul,
