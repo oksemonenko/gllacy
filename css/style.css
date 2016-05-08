@@ -898,6 +898,15 @@ h3 {
   display: none;
 }
 
+.breadcrumbs-active span {
+  border: none;
+}
+
+.breadcrumbs-active a:hover span {
+  border: none;
+  color: #ffffff;
+}
+
 .catalog-title {
   margin-bottom: 22px;
   color:  #ffffff;
