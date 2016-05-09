@@ -1385,6 +1385,17 @@ body > input[type="radio"] {
   background-color: #ffffff;
 }
 
+/*Нужно или нет? Как исправить стили при наведении?*/
+#btn-2:checked ~ .site-wrapper .user-block a,
+#btn-2:checked ~ .site-wrapper .search input[type="submit"]{
+  background-color: rgba(137, 150, 166, 0.8);
+}
+
+#btn-3:checked ~ .site-wrapper .user-block a,
+#btn-3:checked ~ .site-wrapper .search input[type="submit"]{
+  background-color: rgba(157, 139, 132, 0.8);
+}
+
 /*.main-slider {*/
   /*!*Для выделения блоков*!*/
   /*!*background-color: yellow;*!*/
