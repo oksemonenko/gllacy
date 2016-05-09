@@ -225,70 +225,6 @@ h3 {
   line-height: 24px;
 }
 
-.main-title {
-  /*Для выделения блоков*/
-  /*background-color: blue;*/
-  /*outline: 1px solid black;*/
-
-  width: 670px;
-  margin-top: 270px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #ffffff;
-}
-
-.main-slider {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
-  margin-bottom: 7px;
-}
-
-.main-slider ul {
-  float: left;
-}
-
-.main-slider .slogan {
-  display: block;
-  width: 280px;
-  padding: 10px 0;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 32px;
-  line-height: 44px;
-  font-weight: 900;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  background:
-          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
-  box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-  border-radius: 28px;
-  text-decoration: none;
-}
-
-/*Как оформить градиент при наведении?*/
-.main-slider .slogan:hover {
-  background:
-          /*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          /*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*/
-          linear-gradient(0deg, #e74a35 0%, #f26843 100%);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 2px 2px 0 #ac1000;
-}
-
 .promo {
   /*Для выделения блоков*/
   /*background-color: red;*/
@@ -1289,4 +1225,211 @@ h3 {
 }
 
 /*Оформление декоративных элементов*/
+/*Слайдер*/
 
+body > input[type="radio"] {
+  display: none;
+}
+
+.site-wrapper {
+  min-width: 1200px;
+
+  background-color: #849d8f;
+  background-image: url("../img/slide-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+/* Псевдоэлементы с изображениями нужны только для предзагрузки картинок,
+ чтобы они уже были в кеше в момент переключения слайдов и сразу отображались */
+
+.site-wrapper:before,
+.site-wrapper:after {
+  content: "";
+
+  visibility: hidden;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  background-image: url("../img/slide-2.png");
+}
+
+.site-wrapper:after {
+  background-image: url("../img/slide-3.png");
+}
+
+.main-slider {
+  position: relative;
+
+  padding-top: 270px;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.slide {
+  display: none;
+}
+
+/*.main-title {*/
+  /*!*Для выделения блоков*!*/
+  /*!*background-color: blue;*!*/
+  /*!*outline: 1px solid black;*!*/
+
+  /*width: 670px;*/
+  /*margin-top: 270px;*/
+  /*margin-bottom: 30px;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  /*font-weight: 900;*/
+  /*font-size: 60px;*/
+  /*line-height: 60px;*/
+  /*font-family: "Roboto", "Arial", sans-serif;*/
+  /*color: #ffffff;*/
+/*}*/
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.slide-btn {
+  display: inline-block;
+  padding: 12px 50px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.slide-btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slide-btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#btn-1:checked ~ .site-wrapper #slide1,
+#btn-2:checked ~ .site-wrapper #slide2,
+#btn-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#btn-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slide-1.png");
+}
+
+#btn-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/slide-2.png");
+}
+
+#btn-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/slide-3.png");
+}
+
+#btn-1:checked ~ .site-wrapper label[for="btn-1"],
+#btn-2:checked ~ .site-wrapper label[for="btn-2"],
+#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  background-color: #ffffff;
+}
+
+/*.main-slider {*/
+  /*!*Для выделения блоков*!*/
+  /*!*background-color: yellow;*!*/
+  /*!*outline: 1px solid black;*!*/
+
+  /*!*margin-bottom: 7px;*!*/
+  /*!*margin-top: 270px;*!*/
+  /*!*margin-bottom: 37px;*!*/
+/*}*/
+
+/*.main-slider ul {*/
+  /*float: left;*/
+/*}*/
+
+/*.main-slider .slogan {*/
+  /*display: block;*/
+  /*width: 280px;*/
+  /*padding: 10px 0;*/
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
+  /*font-size: 32px;*/
+  /*line-height: 44px;*/
+  /*font-weight: 900;*/
+  /*text-align: center;*/
+  /*color: #ffffff;*/
+  /*text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);*/
+  /*background:*/
+    /*!*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+          /*linear-gradient(0deg, #e74a35 0%, #f26843 100%);*/
+  /*box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);*/
+  /*border-radius: 28px;*/
+  /*text-decoration: none;*/
+/*}*/
+
+/*!*Как оформить градиент при наведении?*!*/
+/*.main-slider .slogan:hover {*/
+  /*background:*/
+    /*!*-webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-moz-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-o-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+    /*!*-ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);*!*/
+          /*linear-gradient(0deg, #e74a35 0%, #f26843 100%);*/
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+  /*box-shadow: 0 2px 2px 0 #ac1000;*/
+/*}*/
