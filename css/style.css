@@ -1263,7 +1263,7 @@ body > input[type="radio"] {
 
 .main-slider {
   position: relative;
-
+  margin-bottom: 40px;
   padding-top: 270px;
 
   text-align: center;
@@ -1275,20 +1275,20 @@ body > input[type="radio"] {
 }
 
 /*.main-title {*/
-  /*!*Для выделения блоков*!*/
-  /*!*background-color: blue;*!*/
-  /*!*outline: 1px solid black;*!*/
+/*!*Для выделения блоков*!*/
+/*!*background-color: blue;*!*/
+/*!*outline: 1px solid black;*!*/
 
-  /*width: 670px;*/
-  /*margin-top: 270px;*/
-  /*margin-bottom: 30px;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  /*font-weight: 900;*/
-  /*font-size: 60px;*/
-  /*line-height: 60px;*/
-  /*font-family: "Roboto", "Arial", sans-serif;*/
-  /*color: #ffffff;*/
+/*width: 670px;*/
+/*margin-top: 270px;*/
+/*margin-bottom: 30px;*/
+/*margin-left: auto;*/
+/*margin-right: auto;*/
+/*font-weight: 900;*/
+/*font-size: 60px;*/
+/*line-height: 60px;*/
+/*font-family: "Roboto", "Arial", sans-serif;*/
+/*color: #ffffff;*/
 /*}*/
 
 .slide-title {
@@ -1296,18 +1296,18 @@ body > input[type="radio"] {
   margin: 0 auto;
   margin-bottom: 30px;
 
-  font-weight: 800;
+  font-weight: 900;
   font-size: 60px;
   line-height: 60px;
 }
 
 .slide-btn {
   display: inline-block;
-  padding: 12px 50px;
+  padding: 10px 42px;
 
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
