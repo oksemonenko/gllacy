@@ -1594,9 +1594,22 @@ body > input[type="radio"] {
 
 /* Всплывающая форма */
 
+/*Оверлей*/
+.modal-content-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.3);
+}
+
 .modal-content {
-  display: none;
+  /*display: none;*/
   position: absolute;
+  z-index: 10;
   top: 338px;
   left: 50%;
   width: 478px;
