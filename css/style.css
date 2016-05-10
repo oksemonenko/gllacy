@@ -456,7 +456,7 @@ h3 {
   /*Для выделения блоков*/
   /*background-color: blue;*/
   /*outline: 1px solid black;*/
-  margin-bottom: 45px;
+  margin-bottom: 37px;
 }
 
 .popular-goods div {
@@ -490,10 +490,13 @@ h3 {
   text-decoration: none;
 }
 
+.popular-goods a {
+  margin-top: 8px;
+}
+
 .popular-goods p,
 .catalog-goods p {
   display: inline;
-  margin-top: 8px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -828,32 +831,37 @@ h3 {
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
-  background-color:  rgba(255, 255, 255, 0.8);;
+  background-color:  rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
   border: 3px solid #c2cec7;
   border-radius: 50%;
 }
 
 .social-btn-tw {
-  background: url("../img/twitter.svg") no-repeat center;
+  background: url("../img/tw.png") no-repeat center;
 }
 
 .social-btn-inst {
-  background: url("../img/instagram.svg") no-repeat center;
+  background: url("../img/insta.png") no-repeat center;
 
 }
 
 .social-btn-fb {
-  background: url("../img/facebook.svg") no-repeat center;
+  background: url("../img/fb.png") no-repeat center;
 
 }
 
 .social-btn-vk {
-  background: url("../img/vkontakte.svg") no-repeat center;
+  background: url("../img/vk.png") no-repeat center;
 }
 
-/*.social-btn:hover {*/
-  /*background-color: #ffffff;*/
-/*}*/
+.social-btn:hover {
+  opacity: 1;
+}
+
+.social-btn:active {
+  box-shadow: inset 0 2px 2px 0 #888888;
+}
 
 .footer-info {
   float: left;
@@ -963,7 +971,7 @@ h3 {
 
 /*Хлебные крошки*/
 .shop-breadcrumbs {
-  padding-top: 22px;
+  padding-top: 7px;
 }
 
 .shop-breadcrumbs span {
@@ -978,7 +986,7 @@ h3 {
 
 .shop-breadcrumbs li {
   display: inline-block;
-  padding: 15px 1px;
+  padding-top: 15px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1300,7 +1308,7 @@ h3 {
 /*Товары в каталоге*/
 .catalog-goods {
   margin-top: 2px;
-  margin-bottom: 27px;
+  margin-bottom: 29px;
   font-size: 0;
 }
 
@@ -1309,7 +1317,7 @@ h3 {
   display: inline-block;
   width: 267px;
   margin-right: 26px;
-  margin-bottom: 23px;
+  margin-bottom: 30px;
   vertical-align: top;
 }
 
@@ -1462,6 +1470,19 @@ h3 {
 
 .inner-page main {
   margin-bottom: 16px;
+}
+
+.inner-page .main-footer .container {
+  position: relative;
+}
+
+.inner-page .main-footer .container::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 27px;
+  width: 1146px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*Оформление декоративных элементов*/
