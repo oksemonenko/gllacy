@@ -337,7 +337,6 @@ h3 {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
-/*Как оформить градиент при наведении?*/
 .main-slider .slogan:hover {
   background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
@@ -353,28 +352,14 @@ h3 {
 }
 
 .promo {
-  /*Для выделения блоков*/
-  /*background-color: red;*/
-  /*outline: 1px solid black;*/
-
   margin-bottom: 40px;
   font-weight: 700;
   color: #ffffff;
 }
 
-/*.promo div {*/
-  /*width: 560px;*/
-  /*height: 229px;*/
-  /*padding: 20px;*/
-  /*background: #373737 no-repeat;*/
-/*}*/
-
 .promo-left {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
   float: left;
+  position: relative;
   box-sizing: border-box;
   width: 560px;
   height: 229px;
@@ -384,11 +369,8 @@ h3 {
 }
 
 .promo-right {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
   float: right;
+  position: relative;
   box-sizing: border-box;
   width: 560px;
   height: 229px;
@@ -413,7 +395,9 @@ h3 {
 
 .promo .slogan {
   display: block;
-  box-sizing: border-box;
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
   margin-top: 43px;
   padding: 11px 22px;
   font-size: 18px;
@@ -443,19 +427,7 @@ h3 {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-.promo-left .slogan {
-  width: 165px;
-  margin-left: 353px;
-}
-
-.promo-right .slogan {
-  width: 190px;
-  margin-left: 330px;
-}
 .popular-goods {
-  /*Для выделения блоков*/
-  /*background-color: blue;*/
-  /*outline: 1px solid black;*/
   margin-bottom: 37px;
 }
 
@@ -1370,6 +1342,20 @@ h3 {
   background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.goods-card-hidden .catalog-btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.goods-card-hidden .catalog-btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .popular-goods .goods-card-hidden::before {
