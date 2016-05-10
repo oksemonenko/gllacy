@@ -32,9 +32,12 @@
           </nav>
           <div class="user-block">
             <form class="search">
-              <input type="search" name="search" placeholder="Поиск по сайту">
+              <input type="search" name="search" placeholder="Что ищем?">
               <input type="submit" value="Найти">
             </form>
+            <!--<form class="search-hidden">-->
+              <!--<input type="search" name="search" placeholder="Что ищем?">-->
+            <!--</form>-->
             <a class="login" href="#">Вход</a>
             <a class="cart" href="#">Корзина</a>
           </div>
@@ -207,6 +210,16 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+      <h2 class="modal-content-title">Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" method="post">
+      <input class="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
+      <input class="user-email" type="email" name="user-email" placeholder="Ваша почта для ответа?">
+      <textarea class="user-comment" name="user-email" placeholder="Напишите что-нибудь..."></textarea>
+      <input class="btn" type="submit" value="Отправить">
+      </form>
     </div>
   </body>
 </html>
