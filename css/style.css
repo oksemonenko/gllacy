@@ -288,10 +288,6 @@ h3 {
 }
 
 .main-title {
-  /*Для выделения блоков*/
-  /*background-color: blue;*/
-  /*outline: 1px solid black;*/
-
   width: 670px;
   margin-top: 270px;
   margin-bottom: 30px;
@@ -305,10 +301,6 @@ h3 {
 }
 
 .main-slider {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
   margin-bottom: 7px;
 }
 
@@ -515,8 +507,6 @@ h3 {
   height: 32px;
   /*Уже вместе с тенью*/
   background: url("../img/rub.png");
-  /*Почему не работает тень?*/
-  /*filter: drop-shadow(0 1px 3px rgba(49, 50, 53, 0.5));*/
 }
 
 .price-kg {
@@ -525,9 +515,6 @@ h3 {
 }
 
 .features {
-  /*Для выделения блоков*/
-  /*background-color: red;*/
-  /*outline: 1px solid black;*/
   padding-bottom: 19px;
   margin-bottom: 40px;
   background: url("../img/wafer-pattern.jpg");
@@ -561,7 +548,6 @@ h3 {
   left: 20px;
   width: 48px;
   height: 49px;
-  /*background: #ffffff;*/
 }
 
 .features p:nth-of-type(1)::before {
@@ -582,10 +568,6 @@ h3 {
 
 
 .activities div {
-  /*Для выделения блоков*/
-  /*background-color: blue;*/
-  /*outline: 1px solid black;*/
-
   width: 560px;
   height: 220px;
   margin-bottom: 39px;
@@ -625,13 +607,6 @@ h3 {
   padding-top: 17px;
   padding-right: 20px;
   background: url("../img/post-border-background.png");
-  /*background: #f8f7f4;*/
-  /*border-style: solid;*/
-  /*border-width: 6px 6px 6px 6px;*/
-  /*-moz-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
-  /*-webkit-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
-  /*-o-border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
-  /*border-image: url("../img/post-background.png") 6 6 6 6 repeat;*/
 }
 
 .activities-subscription p {
@@ -692,15 +667,9 @@ h3 {
 }
 
 .main-contacts {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
-  position: absolute;
+ position: absolute;
   top: 63px;
   right: 27px;
-  /*bottom: ;*/
-  /*left: ;*/
   float: right;
   width: 277px;
   padding-top: 14px;
@@ -768,10 +737,6 @@ h3 {
 }
 
 .main-footer {
-  /*Для выделения блоков*/
-  /*background-color: red;*/
-  /*outline: 1px solid black;*/
-
   margin-bottom: 0;
   padding-top: 18px;
   padding-bottom: 25px;
@@ -1289,10 +1254,6 @@ h3 {
   display: block;
 }
 
-/*.catalog-goods > div:hover .goods-card {*/
-  /*display: none;*/
-/*}*/
-
 /*Карточка товара при наведении*/
 .goods-card-hidden {
   display: none;
@@ -1305,7 +1266,7 @@ h3 {
   padding-bottom: 17px;
   border-radius: 5px;
   background-color:  #9db1a5;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .goods-card-hidden .price {
