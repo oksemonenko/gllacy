@@ -75,7 +75,17 @@ h3 {
   font-size: 0;
 }
 
-.main-navigation li {
+.main-navigation-list > li {
+  position: relative;
+  display: inline-block;
+  padding: 15px 1px;
+
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: top;
+}
+/*Для внутренней страницы*/
+.inner-page .main-navigation li {
   display: inline-block;
   padding: 15px 1px;
 
@@ -122,6 +132,31 @@ h3 {
 .main-navigation-active span {
   border: none;
 }
+
+/*Подменю*/
+.sub-menu {
+  position: absolute;
+}
+
+.sub-menu .sub-menu-title a {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-weight: 700;
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 7px 13px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #323232;
+  text-decoration: none;
+}
+
+
 
 .user-block {
   /*Для выделения блоков*/
@@ -1234,6 +1269,7 @@ h3 {
 }
 
 .catalog-goods > div {
+  position: relative;
   display: inline-block;
   width: 267px;
   margin-right: 26px;
@@ -1250,10 +1286,74 @@ h3 {
   margin-top: 2px;
 }
 
-.catalog-goods > div:hover {
-  background-color: #9db1a5;
+.catalog-goods > div:hover .goods-card-hidden,
+.popular-goods > div:hover .goods-card-hidden {
+  display: block;
 }
 
+/*.catalog-goods > div:hover .goods-card {*/
+  /*display: none;*/
+/*}*/
+
+/*Карточка товара при наведении*/
+.goods-card-hidden {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 267px;
+  padding: 10px;
+  padding-bottom: 17px;
+  border-radius: 5px;
+  background-color:  #9db1a5;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.goods-card-hidden .price {
+  top: 219px;
+}
+
+.catalog-goods .goods-card-hidden p,
+.popular-goods .goods-card-hidden p {
+  border-bottom: none;
+}
+
+.catalog-goods .goods-card-hidden a:hover p,
+.popular-goods .goods-card-hidden a:hover p {
+  color: #ffffff;
+  border-bottom: none;
+}
+
+.goods-card-hidden .catalog-btn {
+  display: block;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 100px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.popular-goods .goods-card-hidden::before {
+  content: "";
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: #ffffff url("../img/hit.png") no-repeat;
+  border-radius: 50%;
+}
 
 /*Страницы каталога*/
 .catalog-page-numbers {
