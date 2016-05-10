@@ -84,15 +84,6 @@ h3 {
   line-height: 18px;
   vertical-align: top;
 }
-/*Для внутренней страницы*/
-.inner-page .main-navigation li {
-  display: inline-block;
-  padding: 15px 1px;
-
-  font-size: 16px;
-  line-height: 18px;
-  vertical-align: top;
-}
 
 .main-navigation a {
   display: block;
@@ -135,7 +126,19 @@ h3 {
 
 /*Подменю*/
 .sub-menu {
+  display: none;
   position: absolute;
+  z-index: 10;
+  width: 142px;
+  top: 52px;
+  left: -160px;
+  background: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.main-navigation-list > li:hover .sub-menu {
+  display: block;
 }
 
 .sub-menu .sub-menu-title a {
@@ -148,15 +151,43 @@ h3 {
 .sub-menu a {
   display: block;
   padding: 7px 13px;
+  padding-left: 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-
+  text-align: left;
   color: #323232;
   text-decoration: none;
 }
 
+.sub-menu a:hover {
+  background: #fbded7;
+  font-weight: 400;
+  border-radius: 0;
+}
 
+.sub-menu li:last-child a:hover {
+  border-radius: 0 0 5px 5px;
+}
+
+.sub-menu .sub-menu-title a:hover {
+  background: #f8f7f4;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+}
+
+.sub-menu a:active {
+  background: #f6b5a5;
+  box-shadow: none;
+}
+
+.sub-menu-active {
+  background: #d07058;
+}
+
+.sub-menu-active a:hover {
+  background: #d07058;
+}
 
 .user-block {
   float: right;
@@ -425,7 +456,7 @@ h3 {
   /*Для выделения блоков*/
   /*background-color: blue;*/
   /*outline: 1px solid black;*/
-  margin-bottom: 21px;
+  margin-bottom: 45px;
 }
 
 .popular-goods div {
@@ -943,6 +974,15 @@ h3 {
 .shop-breadcrumbs li {
   margin: 0;
   padding: 0;
+}
+
+.shop-breadcrumbs li {
+  display: inline-block;
+  padding: 15px 1px;
+
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: top;
 }
 
 .shop-breadcrumbs a {
