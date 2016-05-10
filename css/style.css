@@ -1080,7 +1080,7 @@ h3 {
   padding-bottom: 9px;
   padding-left: 15px;
   color: #ffffff;
-  background-color: rgba(248, 247, 244, 0.2);
+  background: rgba(248, 247, 244, 0.2) url("../img/arrow.svg") no-repeat 95%;
   border: none;
   border-radius: 20px;
   /*скрытие стрелки*/
@@ -1096,25 +1096,7 @@ h3 {
 
 .catalog-filters-sorting select:hover {
   color: #323232;
-  background: #ffffff;
-}
-
-/*.catalog-filters-sorting select:hover legend::after {*/
-/*background: url("../img/arrow-hover.svg") no-repeat;*/
-/*}*/
-
-.catalog-filters-sorting legend {
-  position: relative;
-}
-
-.catalog-filters-sorting legend::after {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 168px;
-  width: 9px;
-  height: 5px;
-  background: url("../img/arrow.svg") no-repeat;
+  background: #ffffff url("../img/arrow-hover.svg") no-repeat 95%;
 }
 
 .toogle-1,
