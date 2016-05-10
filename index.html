@@ -38,7 +38,17 @@
             <!--<form class="search-hidden">-->
               <!--<input type="search" name="search" placeholder="Что ищем?">-->
             <!--</form>-->
-            <a class="login" href="#">Вход</a>
+            <a class="login" href="#">Вход
+              <div class="login-hidden">
+                <form class="login-form" method="post">
+                  <input class="user-email" type="email" name="user-email" placeholder="Электронная почта">
+                  <input class="user-password" type="password" name="user-password" placeholder="Пароль">
+                  <input class="btn" type="submit" value="Войти">
+                  <a class="restore" href="#">Забыли пароль?</a>
+                  <a class="restore" href="#">Новая регистрация</a>
+                </form>
+              </div>
+            </a>
             <a class="cart" href="#">Корзина</a>
           </div>
           <div class="header-contacts">

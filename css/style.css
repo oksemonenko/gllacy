@@ -1592,10 +1592,12 @@ body > input[type="radio"] {
   background-color: rgba(157, 139, 132, 0.8);
 }
 
-/* Всплывающая форма */
+/* Всплывающие формы */
 
+/*Форма обратной связи*/
 /*Оверлей*/
 .modal-content-overlay {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -1607,7 +1609,7 @@ body > input[type="radio"] {
 }
 
 .modal-content {
-  /*display: none;*/
+  display: none;
   position: absolute;
   z-index: 10;
   top: 338px;
@@ -1795,3 +1797,25 @@ body > input[type="radio"] {
   background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
+
+/*Форма авторизации*/
+.login-hidden {
+  /*   display: none; */
+  position: absolute;
+  top: 37px;
+  left: -182px;
+  width: 277px;
+  padding: 22px 25px;
+  box-sizing: border-box;
+
+  color: #323232;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+}
+
+.login:hover .login-hidden {
+  display: block;
+}
+
+
