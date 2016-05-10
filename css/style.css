@@ -159,10 +159,6 @@ h3 {
 
 
 .user-block {
-  /*Для выделения блоков*/
-  /*background-color: yellow;*/
-  /*outline: 1px solid black;*/
-
   float: right;
   max-width: 267px;
   padding-top: 23px;
@@ -186,7 +182,7 @@ h3 {
   text-decoration: none;
 }
 
-.login:hover {
+.login:hover{
   color: #373737;
   background: #f8f7f4;
 }
@@ -213,6 +209,10 @@ h3 {
   background: url("../img/cart.svg") no-repeat;
 }
 
+.cart:hover::before {
+  background: url("../img/cart-full.png");
+}
+
 .search {
   display: inline-block;
 }
@@ -237,10 +237,6 @@ h3 {
 }
 
 .header-contacts {
-  /*Для выделения блоков*/
-  /*background-color: blue;*/
-  /*outline: 1px solid black;*/
-
   float: right;
   width: 267px;
   margin-top: 17px;
