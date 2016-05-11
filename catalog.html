@@ -34,12 +34,48 @@
         </div>
       </nav>
       <div class="user-block">
-        <form class="search">
-          <!--<input type="search" name="search" placeholder="Поиск по сайту">-->
-          <input type="submit" value="Найти">
-        </form>
-        <a class="login" href="#">Вход</a>
-        <a class="cart" href="#">2 товара</a>
+        <div class="search-hidden">
+          <input class="search" type="submit" value="Найти">
+          <form class="search-form">
+            <input type="search" name="search" placeholder="Что ищем?">
+          </form>
+        </div>
+        <!--<form class="search">-->
+        <!--&lt;!&ndash;<input type="search" name="search" placeholder="Что ищем?">&ndash;&gt;-->
+        <!--<input type="submit" value="Найти">-->
+        <!--</form>-->
+        <div class="login-hidden">
+          <a class="login" href="#">Вход</a>
+          <form class="login-form" method="post">
+            <input class="user-email" type="email" name="user-email" placeholder="Электронная почта">
+            <input class="user-password" type="password" name="user-password" placeholder="Пароль">
+            <input class="btn" type="submit" value="Войти">
+            <a class="restore" href="#">Забыли пароль?</a>
+            <a class="restore" href="#">Новая регистрация</a>
+          </form>
+        </div>
+        <div class="cart-hidden">
+          <a class="cart" href="#">2 товара</a>
+          <div class="cart-order">
+            <ul>
+              <li>
+                <img src="./img/cart-goods-1.png" width="33" height="33">
+                <span>Пломбир с апельсиновым джемом</span>
+                <span>1,5 кг х 200 руб.</span>
+                <span>300 руб.</span>
+              </li>
+              <li>
+                <img src="./img/cart-goods-2.png" width="33" height="33">
+                <span>Клубничный пломбир с присыпкой<br>
+                  из белого шоколада</span>
+                <span>1,5 кг х 300 руб.</span>
+                <span>450 руб.</span>
+              </li>
+            </ul>
+            <div class="cart-order-total-price">Итого: 750 руб.</div>
+            <a class="btn" href="#">Оформить заказ</a>
+          </div>
+        </div>
       </div>
       <div class="header-contacts">
         <span>С 10 до 20, ежедневно</span>
