@@ -250,9 +250,9 @@ h3 {
 }
 
 /*Скрытый слой, показывается по наведению*/
-.search input[type="search"]{
-  display: none;
-}
+/*.search input[type="search"]{*/
+  /*display: none;*/
+/*}*/
 
 /*.search-hidden {*/
   /*display: none;*/
@@ -1802,10 +1802,10 @@ body > input[type="radio"] {
 .login-hidden {
   display: none;
   position: absolute;
-  top: 37px;
-  left: -182px;
+  top: 60px;
+  right: 227px;
   width: 277px;
-  padding: 22px 25px;
+  padding: 22px 20px;
   box-sizing: border-box;
 
   color: #323232;
@@ -1818,4 +1818,180 @@ body > input[type="radio"] {
   display: block;
 }
 
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 240px;
+  height: 44px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 52);
+  box-sizing: border-box;
+  background-color:  #ffffff;
+}
+
+.login-form input[type="email"]:hover,
+.login-form input[type="password"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.login-form .btn {
+  float: left;
+  padding: 10px 25px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
+}
+
+.login-form .btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-form .btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-form .restore {
+  margin-left: 17px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  background: #f8f7f4;
+}
+
+/*Стилизация плейсхолдеров*/
+.login-form input[type="email"]::-webkit-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
+
+.login-form input[type="email"]::-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 19+ */
+
+.login-form input[type="email"]:-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 18- */
+
+.login-form input[type="email"]:-ms-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
+
+.login-form input[type="password"]::-webkit-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
+
+.login-form input[type="password"]::-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 19+ */
+
+.login-form input[type="password"]:-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 18- */
+
+.login-form input[type="password"]:-ms-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
+
+/*Форма поиска*/
+
+.search-hidden {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 332px;
+  width: 340px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+
+  color: #323232;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+}
+
+.search:hover .search-hidden {
+  display: block;
+}
+
+.search-hidden input[type="search"] {
+  width: 310px;
+  height: 44px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 52);
+  box-sizing: border-box;
+  background-color:  #ffffff;
+}
+
+.search-hidden input[type="search"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.search-hidden input[type="search"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.search-hidden input[type="search"]::-webkit-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
+
+.search-hidden input[type="search"]::-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 19+ */
+
+.search-hidden input[type="search"]:-moz-placeholder {
+  color:#999999;
+  font-weight: 400;
+}/* Firefox 18- */
+
+.search-hidden input[type="search"]:-ms-input-placeholder {
+  color:#999999;
+  font-weight: 400;
+}
 
