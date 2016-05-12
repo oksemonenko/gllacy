@@ -928,13 +928,56 @@ h3 {
 .activities-subscription p {
   margin-bottom: 36px;
 }
+
+.subscription-form {
+  position: relative;
+}
+
 .activities-subscription input[type="email"] {
-  width: 350px;
+  width: 367px;
   padding: 10px 0;
   padding-left: 13px;
+  box-sizing: border-box;
   border-radius: 5px;
   border:1px solid #ccc;
   background:white;
+}
+
+.subscription-form input[type="email"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.subscription-form input[type="email"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.subscription-form label {
+  position: absolute;
+  left: 15px;
+  top: 11px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
+}
+
+.subscription-form input:focus + label,
+.subscription-form input:valid + label {
+  top: -15px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.subscription-form input:focus + label {
+  color: #5b9ddf;
+}
+
+.subscription-form input:valid + label {
+  color: #999999;
 }
 
 .activities-subscription input[type="submit"] {
@@ -986,7 +1029,7 @@ h3 {
 .main-contacts {
  position: absolute;
   top: 63px;
-  right: 27px;
+  right: 103px;
   float: right;
   width: 277px;
   padding-top: 14px;
