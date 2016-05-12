@@ -1015,16 +1015,12 @@ h3 {
 .map {
   position: relative;
   width: 100%;
-  /*width: 1200px;*/
-  /*margin-right: auto;*/
-  /*margin-left: auto;*/
 }
 
-.map img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+iframe {
+  width: 100%;
 }
+
 
 .main-contacts {
  position: absolute;
