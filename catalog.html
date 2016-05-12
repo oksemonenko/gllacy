@@ -37,18 +37,17 @@
         <div class="search-hidden">
           <input class="search" type="submit" value="Найти">
           <form class="search-form">
-            <input type="search" name="search" placeholder="Что ищем?">
+            <input type="search" name="search" id="search" required>
+            <label for="search">Что ищем?</label>
           </form>
         </div>
-        <!--<form class="search">-->
-        <!--&lt;!&ndash;<input type="search" name="search" placeholder="Что ищем?">&ndash;&gt;-->
-        <!--<input type="submit" value="Найти">-->
-        <!--</form>-->
         <div class="login-hidden">
           <a class="login" href="#">Вход</a>
           <form class="login-form" method="post">
-            <input class="user-email" type="email" name="user-email" placeholder="Электронная почта">
-            <input class="user-password" type="password" name="user-password" placeholder="Пароль">
+            <input class="user-email" type="email" name="user-email" id="user-email" required>
+            <label for="user-email">Электронная почта</label>
+            <input class="user-password" type="password" name="user-password" id="user-password" required>
+            <label for="user-password">Пароль</label>
             <input class="btn" type="submit" value="Войти">
             <a class="restore" href="#">Забыли пароль?</a>
             <a class="restore" href="#">Новая регистрация</a>

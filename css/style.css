@@ -324,49 +324,53 @@ h3 {
   background: #f8f7f4;
 }
 
-/*Стилизация плейсхолдеров*/
-.login-form input[type="email"]::-webkit-input-placeholder {
-  color:#999999;
+.login-form label[for="user-email"],
+.login-form label[for="user-password"] {
+  position: absolute;
+  left: 29px;
+  display: inline-block;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
 }
 
-.login-form input[type="email"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.login-form input[type="email"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.login-form input[type="email"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.login-form label[for="user-email"] {
+  top: 30px;
 }
 
-.login-form input[type="password"]::-webkit-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.login-form label[for="user-password"] {
+  top: 97px;
 }
 
-.login-form input[type="password"]::-moz-placeholder {
-  color:#999999;
+.login-form input:focus + label[for="user-email"],
+.login-form input:focus + label[for="user-password"] {
   font-weight: 400;
-}/* Firefox 19+ */
-
-.login-form input[type="password"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.login-form input[type="password"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
 }
 
+.login-form input:valid + label[for="user-email"],
+.login-form input:valid + label[for="user-password"] {
+  top: 6px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+}
 
+.login-form input:focus + label[for="user-email"],
+.login-form input:valid + label[for="user-email"] {
+  top: 6px;
+}
 
+.login-form input:focus + label[for="user-password"],
+.login-form input:valid + label[for="user-password"] {
+  top: 70px;
+}
 
 .user-block a::before {
   content: "";
@@ -464,24 +468,33 @@ h3 {
   border: 2px solid rgba(46, 136, 228, 52);
 }
 
-.search-form input[type="search"]::-webkit-input-placeholder {
-  color:#999999;
+.search-form label {
+  position: absolute;
+  left: 29px;
+  top: 30px;
+  display: inline-block;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
 }
 
-.search-form input[type="search"]::-moz-placeholder {
-  color:#999999;
+.search-form input:focus + label,
+.search-form input:valid + label {
+  top: 6px;
   font-weight: 400;
-}/* Firefox 19+ */
+  font-size: 11px;
+  line-height: 13px;
+}
 
-.search-form input[type="search"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
+.search-form input:focus + label {
+  color: #5b9ddf;
+}
 
-.search-form input[type="search"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.search-form input:valid + label {
+  color: #999999;
 }
 
 /*Корзина с товарами при наведении*/
