@@ -105,7 +105,7 @@ h3 {
   border-radius: 15px;
 }
 
-.main-navigation a:active {
+.main-navigation-list a:active {
   font-weight: 700;
 
   color: #373737;
@@ -195,7 +195,14 @@ h3 {
   padding-top: 23px;
 }
 
-.user-block a {
+.search-hidden,
+.login-hidden,
+.cart-hidden {
+  padding-bottom: 10px;
+}
+
+.cart,
+.login {
   position: relative;
   display: inline-block;
   padding: 8px 17px;
@@ -208,7 +215,8 @@ h3 {
   vertical-align: top;
 
   color: #ffffff;
-  background: rgba(161, 180, 169, 0.8);
+  /*background: rgba(161, 180, 169, 0.8);*/
+  background: rgba(248, 247, 244, 0.2);
   border-radius: 15px;
   text-decoration: none;
 }
@@ -216,6 +224,152 @@ h3 {
 .login:hover{
   color: #373737;
   background: #f8f7f4;
+}
+
+/*Форма авторизации*/
+.login-hidden {
+  position: relative;
+  display: inline-block;
+}
+
+
+.login-form {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 37px;
+  right: 0;
+  width: 277px;
+  padding: 22px 20px;
+  box-sizing: border-box;
+
+  color: #323232;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.login-hidden:hover .login-form {
+  display: block;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 240px;
+  height: 44px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 52);
+  box-sizing: border-box;
+  background-color:  #ffffff;
+}
+
+.login-form input[type="email"]:hover,
+.login-form input[type="password"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.login-form .btn {
+  float: left;
+  padding: 10px 25px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  cursor: pointer;
+}
+
+.login-form .btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-form .btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.login-form .restore {
+  margin-left: 17px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  background: #f8f7f4;
+}
+
+.login-form label[for="user-email"],
+.login-form label[for="user-password"] {
+  position: absolute;
+  left: 29px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
+}
+
+.login-form label[for="user-email"] {
+  top: 30px;
+}
+
+.login-form label[for="user-password"] {
+  top: 97px;
+}
+
+.login-form input:focus + label[for="user-email"],
+.login-form input:focus + label[for="user-password"] {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #5b9ddf;
+}
+
+.login-form input:valid + label[for="user-email"],
+.login-form input:valid + label[for="user-password"] {
+  top: 6px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #999999;
+}
+
+.login-form input:focus + label[for="user-email"],
+.login-form input:valid + label[for="user-email"] {
+  top: 6px;
+}
+
+.login-form input:focus + label[for="user-password"],
+.login-form input:valid + label[for="user-password"] {
+  top: 70px;
 }
 
 .user-block a::before {
@@ -244,55 +398,252 @@ h3 {
   background: url("../img/cart-full.png");
 }
 
-.search {
+.search-hidden {
   position: relative;
   display: inline-block;
 }
 
-/*Скрытый слой, показывается по наведению*/
-/*.search input[type="search"]{*/
-  /*display: none;*/
-/*}*/
 
-/*.search-hidden {*/
-  /*display: none;*/
-/*}*/
-
-/*.search-hidden {*/
-  /*position: absolute;*/
-  /*top: 36px;*/
-  /*left: -312px;*/
-  /*width: 341px;*/
-  /*background-color:  #f8f7f4;*/
-  /*box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);*/
-  /*border: none;*/
-  /*border-radius: 7px;*/
-/*}*/
-
-/*.search input[type="submit"]:hover .search-hidden {*/
-  /*display: block;*/
-/*}*/
-
-
-.search input[type="submit"] {
+.search-hidden .search {
   display: inline-block;
   width: 32px;
   height: 32px;
   font-size: 0;
-  background: rgba(161, 180, 169, 0.8) url("../img/search.svg") no-repeat center;
+  background: rgba(248, 247, 244, 0.2) url("../img/search.svg") no-repeat center;
   border-radius: 50%;
   border: none;
 }
 
-.search input[type="submit"]:hover {
+.search-hidden .search:hover {
   color: #373737;
   background: #f8f7f4 url("../img/search-hover.svg") no-repeat center;
 }
 
+
+/*Форма поиска*/
+
+.search-form {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 37px;
+  right: 0;
+  width: 340px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+
+  color: #323232;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.search-hidden:hover .search-form {
+  display: block;
+}
+
+.search-form input[type="search"] {
+  width: 310px;
+  height: 44px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  border-radius: 5px;
+  border: 1px solid rgba(178, 178, 178, 52);
+  box-sizing: border-box;
+  background-color:  #ffffff;
+}
+
+.search-form input[type="search"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.search-form input[type="search"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.search-form label {
+  position: absolute;
+  left: 29px;
+  top: 30px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
+}
+
+.search-form input:focus + label,
+.search-form input:valid + label {
+  top: 6px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.search-form input:focus + label {
+  color: #5b9ddf;
+}
+
+.search-form input:valid + label {
+  color: #999999;
+}
+
+/*Корзина с товарами при наведении*/
+.cart-hidden {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-order {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 37px;
+  right: 0;
+  width: 539px;
+  padding-top: 3px;
+  box-sizing: border-box;
+
+  color: #323232;
+
+  background: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.cart-hidden:hover .cart-order {
+  display: block;
+}
+
+.cart-order ul {
+  list-style: none;
+}
+
+.cart-order li {
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color:  #323232;
+}
+
+.cart-order li::before,
+.cart-order li::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -26px;
+
+  width: 12px;
+  height: 1px;
+  background-color: #070707;
+}
+
+.cart-order li::before {
+  transform: rotate(45deg);
+}
+
+.cart-order li::after {
+  transform: rotate(-45deg);
+}
+
+.cart-order img,
+.cart-order span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cart-order span {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-right: 17px;
+}
+
+.cart-order span:last-of-type {
+  margin-right: 0;
+}
+
+.cart-order .cart-order-price {
+  padding: 0;
+  color: #999999;
+}
+
+.cart-order-total-price {
+  position: relative;
+  padding-left: 417px;
+  padding-top: 10px;
+  margin-bottom: 13px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  color:  #333333;
+  /*   border-top: 1px solid #cacac7; */
+}
+
+.cart-order-total-price::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 12px;
+  width: 512px;
+  height: 1px;
+  background: #cacac7;
+
+}
+
+.cart-order .btn {
+  float: right;
+  padding: 10px 15px;
+  margin-bottom: 22px;
+  margin-right: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fefefe;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-order .btn:hover {
+  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.cart-order .btn:active {
+  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+
+
+
 .header-contacts {
   float: right;
   width: 267px;
-  margin-top: 17px;
+  margin-top: 7px;
 }
 
 .header-contacts span {
@@ -308,62 +659,6 @@ h3 {
   font-size: 22px;
   line-height: 24px;
 }
-
-/*.main-title {*/
-  /*width: 670px;*/
-  /*margin-top: 270px;*/
-  /*margin-bottom: 30px;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  /*font-weight: 900;*/
-  /*font-size: 60px;*/
-  /*line-height: 60px;*/
-  /*font-family: "Roboto", "Arial", sans-serif;*/
-  /*color: #ffffff;*/
-/*}*/
-
-/*.main-slider {*/
-  /*margin-bottom: 7px;*/
-/*}*/
-
-/*.main-slider ul {*/
-  /*float: left;*/
-/*}*/
-
-/*.main-slider .slogan {*/
-  /*display: block;*/
-  /*width: 280px;*/
-  /*padding: 10px 0;*/
-  /*margin-right: auto;*/
-  /*margin-left: auto;*/
-  /*font-size: 32px;*/
-  /*line-height: 44px;*/
-  /*font-weight: 900;*/
-  /*text-align: center;*/
-  /*color: #ffffff;*/
-  /*text-decoration: none;*/
-  /*text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);*/
-  /*background: #f26843;*/
-  /*background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);*/
-  /*background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);*/
-  /*background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);*/
-  /*border-radius: 100px;*/
-  /*box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);*/
-/*}*/
-
-/*.main-slider .slogan:hover {*/
-  /*background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);*/
-  /*background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);*/
-  /*background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);*/
-  /*box-shadow: 0 2px 2px rgba(172, 16, 0, 1);*/
-/*}*/
-
-/*.main-slider .slogan:hover:active {*/
-  /*background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);*/
-  /*background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);*/
-  /*background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);*/
-  /*box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);*/
-/*}*/
 
 .promo {
   margin-bottom: 40px;
@@ -497,7 +792,6 @@ h3 {
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
-/*Как сделать, чтобы подчеркивание сдвигалось?*/
 .popular-goods a:active p {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
@@ -634,13 +928,56 @@ h3 {
 .activities-subscription p {
   margin-bottom: 36px;
 }
+
+.subscription-form {
+  position: relative;
+}
+
 .activities-subscription input[type="email"] {
-  width: 350px;
+  width: 367px;
   padding: 10px 0;
   padding-left: 13px;
+  box-sizing: border-box;
   border-radius: 5px;
   border:1px solid #ccc;
   background:white;
+}
+
+.subscription-form input[type="email"]:hover {
+  border: 2px solid rgba(154, 154, 154, 52);
+}
+
+.subscription-form input[type="email"]:focus {
+  border: 2px solid rgba(46, 136, 228, 52);
+}
+
+.subscription-form label {
+  position: absolute;
+  left: 15px;
+  top: 11px;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
+}
+
+.subscription-form input:focus + label,
+.subscription-form input:valid + label {
+  top: -15px;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.subscription-form input:focus + label {
+  color: #5b9ddf;
+}
+
+.subscription-form input:valid + label {
+  color: #999999;
 }
 
 .activities-subscription input[type="submit"] {
@@ -677,21 +1014,18 @@ h3 {
 
 .map {
   position: relative;
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
 }
 
-.map img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+iframe {
+  width: 100%;
 }
+
 
 .main-contacts {
  position: absolute;
   top: 63px;
-  right: 27px;
+  right: 103px;
   float: right;
   width: 277px;
   padding-top: 14px;
@@ -792,7 +1126,7 @@ h3 {
   text-decoration: none;
   background-color:  rgba(255, 255, 255, 0.8);
   opacity: 0.8;
-  border: 3px solid #c2cec7;
+  border: 3px solid rgba(248, 247, 244, 0.5);
   border-radius: 50%;
 }
 
@@ -962,6 +1296,11 @@ h3 {
 }
 
 .shop-breadcrumbs a:hover span {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
+}
+
+.shop-breadcrumbs a:active span {
   color: #ffbc9e;
   border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
@@ -1287,7 +1626,7 @@ h3 {
   padding: 10px;
   padding-bottom: 17px;
   border-radius: 5px;
-  background-color:  #9db1a5;
+  background: rgba(248, 247, 244, 0.3);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -1304,6 +1643,16 @@ h3 {
 .popular-goods .goods-card-hidden a:hover p {
   color: #ffffff;
   border-bottom: none;
+}
+
+.catalog-goods .goods-card-hidden a:hover,
+.popular-goods .goods-card-hidden a:hover {
+  cursor: default;
+}
+
+.catalog-goods .goods-card-hidden .catalog-btn:hover,
+.popular-goods .goods-card-hidden .catalog-btn:hover {
+  cursor: pointer;
 }
 
 .goods-card-hidden .catalog-btn {
@@ -1581,17 +1930,6 @@ body > input[type="radio"] {
   background-color: #ffffff;
 }
 
-/*Нужно или нет? Как исправить стили при наведении?*/
-#btn-2:checked ~ .site-wrapper .user-block a,
-#btn-2:checked ~ .site-wrapper .search input[type="submit"]{
-  background-color: rgba(137, 150, 166, 0.8);
-}
-
-#btn-3:checked ~ .site-wrapper .user-block a,
-#btn-3:checked ~ .site-wrapper .search input[type="submit"]{
-  background-color: rgba(157, 139, 132, 0.8);
-}
-
 /* Всплывающие формы */
 
 /*Форма обратной связи*/
@@ -1609,10 +1947,11 @@ body > input[type="radio"] {
 }
 
 .modal-content {
-  display: none;
+  /*display: none;*/
   position: absolute;
   z-index: 10;
-  top: 338px;
+  /*top: 338px;*/
+  top: 100px;
   left: 50%;
   width: 478px;
   margin-left: -239px;
@@ -1798,200 +2137,46 @@ body > input[type="radio"] {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-/*Форма авторизации*/
-.login-hidden {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 227px;
-  width: 277px;
-  padding: 22px 20px;
-  box-sizing: border-box;
 
-  color: #323232;
 
-  background: #f8f7f4;
-  border-radius: 5px;
-}
 
-.login:hover .login-hidden {
-  display: block;
-}
+/*!*Классы для js*!*/
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
-  width: 240px;
-  height: 44px;
-  margin-bottom: 20px;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #323232;
-  border-radius: 5px;
-  border: 1px solid rgba(178, 178, 178, 52);
-  box-sizing: border-box;
-  background-color:  #ffffff;
-}
+/*.modal-content-show {*/
+  /*display: block;*/
+/*}*/
 
-.login-form input[type="email"]:hover,
-.login-form input[type="password"]:hover {
-  border: 2px solid rgba(154, 154, 154, 52);
-}
+/*.animation {*/
+  /*animation: bounce 0.6s;*/
+/*}*/
 
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus {
-  border: 2px solid rgba(46, 136, 228, 52);
-}
+/*.modal-error {*/
+  /*animation: shake 0.6s;*/
+/*}*/
 
-.login-form .btn {
-  float: left;
-  padding: 10px 25px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
-  color: #fefefe;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  background: #f26843;
-  background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-  background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  border-radius: 20px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  border: none;
-  cursor: pointer;
-}
+/*@keyframes bounce {*/
+  /*0%   {*/
+    /*transform: translateY(-2000px);*/
+  /*}*/
+  /*70%  {*/
+    /*transform: translateY(30px);*/
+  /*}*/
+  /*90%  {*/
+    /*transform: translateY(-10px);*/
+  /*}*/
+  /*100% {*/
+    /*transform: translateY(0);*/
+  /*}*/
+/*}*/
 
-.login-form .btn:hover {
-  background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-  background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.login-form .btn:active {
-  background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.login-form .restore {
-  margin-left: 17px;
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-  color: #323232;
-  background: #f8f7f4;
-}
-
-/*Стилизация плейсхолдеров*/
-.login-form input[type="email"]::-webkit-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
-.login-form input[type="email"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.login-form input[type="email"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.login-form input[type="email"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
-.login-form input[type="password"]::-webkit-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
-.login-form input[type="password"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.login-form input[type="password"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.login-form input[type="password"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
-/*Форма поиска*/
-
-.search-hidden {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 332px;
-  width: 340px;
-  padding: 20px 15px;
-  box-sizing: border-box;
-
-  color: #323232;
-
-  background: #f8f7f4;
-  border-radius: 5px;
-}
-
-.search:hover .search-hidden {
-  display: block;
-}
-
-.search-hidden input[type="search"] {
-  width: 310px;
-  height: 44px;
-  padding-left: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Roboto", "Arial", sans-serif;
-  color: #323232;
-  border-radius: 5px;
-  border: 1px solid rgba(178, 178, 178, 52);
-  box-sizing: border-box;
-  background-color:  #ffffff;
-}
-
-.search-hidden input[type="search"]:hover {
-  border: 2px solid rgba(154, 154, 154, 52);
-}
-
-.search-hidden input[type="search"]:focus {
-  border: 2px solid rgba(46, 136, 228, 52);
-}
-
-.search-hidden input[type="search"]::-webkit-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
-.search-hidden input[type="search"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.search-hidden input[type="search"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.search-hidden input[type="search"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
-}
-
+/*@keyframes shake {*/
+  /*0%, 100% {*/
+    /*transform: translateX(0);*/
+  /*}*/
+  /*10%, 30%, 50%, 70%, 90% {*/
+    /*transform: translateX(-10px);*/
+  /*}*/
+  /*20%, 40%, 60%, 80% {*/
+    /*transform: translateX(10px);*/
+  /*}*/
+/*}*/

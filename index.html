@@ -31,14 +31,25 @@
             </ul>
           </nav>
           <div class="user-block">
-            <form class="search">
-              <!--<input type="search" name="search" placeholder="Что ищем?">-->
-              <input type="submit" value="Найти">
-            </form>
-            <!--<form class="search-hidden">-->
-              <!--<input type="search" name="search" placeholder="Что ищем?">-->
-            <!--</form>-->
-            <a class="login" href="#">Вход</a>
+            <div class="search-hidden">
+              <input class="search" type="submit" value="Найти">
+              <form class="search-form">
+                <input type="search" name="search" id="search" required>
+                <label for="search">Что ищем?</label>
+              </form>
+            </div>
+            <div class="login-hidden">
+              <a class="login" href="#">Вход</a>
+              <form class="login-form" method="post">
+                <input class="user-email" type="email" name="user-email" id="user-email" required>
+                <label for="user-email">Электронная почта</label>
+                <input class="user-password" type="password" name="user-password" id="user-password" required>
+                <label for="user-password">Пароль</label>
+                <input class="btn" type="submit" value="Войти">
+                <a class="restore" href="#">Забыли пароль?</a>
+                <a class="restore" href="#">Новая регистрация</a>
+              </form>
+            </div>
             <a class="cart" href="#">Корзина</a>
           </div>
           <div class="header-contacts">
@@ -49,7 +60,6 @@
       </header>
       <main>
         <div class="container">
-          <!--<h1 class="main-title">Крем-брюле и пломбир с малиновым джемом</h1>-->
           <div class="main-slider clearfix">
             <div class="slide" id="slide1">
               <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
@@ -68,13 +78,6 @@
               <label for="btn-2"></label>
               <label for="btn-3"></label>
             </div>
-
-            <!--<ul>-->
-              <!--<li class="slider-active">1</li>-->
-              <!--<li>2</li>-->
-              <!--<li>3</li>-->
-            <!--</ul>-->
-            <!--<a class="slogan" href="#">Давайте оба!</a>-->
           </div>
           <section class="promo clearfix">
             <div class="promo-left">
@@ -164,15 +167,17 @@
             <div class="activities-subscription">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,
                 что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-              <form>
-                <input type="email" name="email" id="email" placeholder="Электронная почта">
+              <form class="subscription-form">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Электронная почта</label>
                 <input type="submit" value="Отправить">
               </form>
             </div>
           </section>
         </div>
         <div class="map">
-          <img src="img/map.jpg" width="1200" height="430" alt="Карта проезда">
+          <!--<img src="img/map.jpg" width="1200" height="430" alt="Карта проезда">-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5968533383623!2d30.32938402030922!3d59.93883153162162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462984774210" width="1200" height="430" style="border:0" allowfullscreen></iframe>
           <address class="main-contacts">
             <p>Адрес главного офиса<br>
               и офлайн магазина:
@@ -211,31 +216,35 @@
         </div>
       </footer>
     </div>
-    <div class="modal-content-overlay">
-      <div class="modal-content">
-        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-        <h2 class="modal-content-title">Мы обязательно вам ответим!</h2>
-        <form class="feedback-form" method="post">
-        <input class="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
-        <input class="user-email" type="email" name="user-email" placeholder="Ваша почта для ответа?">
-        <textarea class="user-comment" name="user-email" placeholder="Напишите что-нибудь..."></textarea>
-        <input class="btn" type="submit" value="Отправить">
-        </form>
-      </div>
-    </div>
-    <div class="login-hidden">
-      <form class="login-form" method="post">
-        <input class="user-email" type="email" name="user-email" placeholder="Электронная почта">
-        <input class="user-password" type="password" name="user-password" placeholder="Пароль">
-        <input class="btn" type="submit" value="Войти">
-        <a class="restore" href="#">Забыли пароль?</a>
-        <a class="restore" href="#">Новая регистрация</a>
-      </form>
-    </div>
-    <div class="search-hidden">
-      <form class="search">
-        <input type="search" name="search" placeholder="Что ищем?">
-      </form>
-    </div>
+    <!--<div class="modal-content-overlay">-->
+      <!--<div class="modal-content">-->
+        <!--<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>-->
+        <!--<h2 class="modal-content-title">Мы обязательно вам ответим!</h2>-->
+        <!--<form class="feedback-form" method="post">-->
+          <!--<label for="feedback-user-name">Как вас зовут?</label>-->
+          <!--<input class="user-name" type="text" name="user-name" id="feedback-user-name" placeholder="Как вас зовут?">-->
+          <!--<label for="feedback-user-email">Ваша почта для ответа?</label>-->
+          <!--<input class="user-email" type="email" name="user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">-->
+          <!--<label for="feedback-user-comment">Напишите что-нибудь...</label>-->
+          <!--<textarea class="user-comment" name="user-comment" id="feedback-user-comment" placeholder="Напишите что-нибудь..."></textarea>-->
+          <!--<input class="btn" type="submit" value="Отправить">-->
+        <!--</form>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="login-hidden">-->
+      <!--<form class="login-form" method="post">-->
+        <!--<input class="user-email" type="email" name="user-email" placeholder="Электронная почта">-->
+        <!--<input class="user-password" type="password" name="user-password" placeholder="Пароль">-->
+        <!--<input class="btn" type="submit" value="Войти">-->
+        <!--<a class="restore" href="#">Забыли пароль?</a>-->
+        <!--<a class="restore" href="#">Новая регистрация</a>-->
+      <!--</form>-->
+    <!--</div>-->
+    <!--<div class="search-hidden">-->
+      <!--<form class="search">-->
+        <!--<input type="search" name="search" placeholder="Что ищем?">-->
+      <!--</form>-->
+    <!--</div>-->
+  <script src="js/main.js"></script>
   </body>
 </html>

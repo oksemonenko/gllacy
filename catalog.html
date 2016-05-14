@@ -34,12 +34,48 @@
         </div>
       </nav>
       <div class="user-block">
-        <form class="search">
-          <input type="search" name="search" placeholder="Поиск по сайту">
-          <input type="submit" value="Найти">
-        </form>
-        <a class="login" href="#">Вход</a>
-        <a class="cart" href="#">2 товара</a>
+        <div class="search-hidden">
+          <input class="search" type="submit" value="Найти">
+          <form class="search-form">
+            <input type="search" name="search" id="search" required>
+            <label for="search">Что ищем?</label>
+          </form>
+        </div>
+        <div class="login-hidden">
+          <a class="login" href="#">Вход</a>
+          <form class="login-form" method="post">
+            <input class="user-email" type="email" name="user-email" id="user-email" required>
+            <label for="user-email">Электронная почта</label>
+            <input class="user-password" type="password" name="user-password" id="user-password" required>
+            <label for="user-password">Пароль</label>
+            <input class="btn" type="submit" value="Войти">
+            <a class="restore" href="#">Забыли пароль?</a>
+            <a class="restore" href="#">Новая регистрация</a>
+          </form>
+        </div>
+        <div class="cart-hidden">
+          <a class="cart" href="#">2 товара</a>
+          <div class="cart-order">
+            <ul>
+              <li>
+                <img src="./img/cart-goods-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                <span>Пломбир с апельсиновым джемом</span>
+                <span>1,5 кг х <span class="cart-order-price">200 руб.</span></span>
+                <span>300 руб.</span>
+              </li>
+              <li>
+                <img src="./img/cart-goods-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой<br>
+                  из белого шоколада">
+                <span>Клубничный пломбир с присыпкой<br>
+                  из белого шоколада</span>
+                <span>1,5 кг х <span class="cart-order-price">300 руб.</span></span>
+                <span>450 руб.</span>
+              </li>
+            </ul>
+            <div class="cart-order-total-price">Итого: 750 руб.</div>
+            <a class="btn" href="#">Оформить заказ</a>
+          </div>
+        </div>
       </div>
       <div class="header-contacts">
         <span>С 10 до 20, ежедневно</span>
@@ -55,12 +91,14 @@
           <legend>Сортировка</legend>
           <select>
             <option>По популярности</option>
+            <option>сначала недорогие</option>
+            <option>сначала дорогие</option>
+            <option>по жирности</option>
           </select>
         </fieldset>
         <fieldset class="catalog-filters-price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
           <div class="toogle-1"><div class="toogle-2"></div></div>
-          <!--<input type="range" min="100" max="500" name="price" id="price">-->
         </fieldset>
         <fieldset class="catalog-filters-fatness">
           <legend>Жирность</legend>
