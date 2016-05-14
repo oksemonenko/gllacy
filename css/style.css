@@ -346,19 +346,21 @@ h3 {
 }
 
 .login-form input:focus + label[for="user-email"],
-.login-form input:focus + label[for="user-password"] {
+.login-form input:focus + label[for="user-password"],
+.login-form input:valid + label[for="user-email"],
+.login-form input:valid + label[for="user-password"] {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
+}
+
+.login-form input:focus + label[for="user-email"],
+.login-form input:focus + label[for="user-password"] {
   color: #5b9ddf;
 }
 
 .login-form input:valid + label[for="user-email"],
 .login-form input:valid + label[for="user-password"] {
-  top: 6px;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 13px;
   color: #999999;
 }
 
@@ -2007,6 +2009,10 @@ body > input[type="radio"] {
   line-height: 28px;
 }
 
+.feedback-form {
+  position: relative;
+}
+
 .feedback-form input[type="text"],
 .feedback-form input[type="email"],
 .feedback-form textarea {
@@ -2044,66 +2050,126 @@ body > input[type="radio"] {
   border: 2px solid rgba(46, 136, 228, 52);
 }
 
-/*Стилизация плейсхолдеров*/
-.feedback-form input[type="text"]::-webkit-input-placeholder {
-  color:#999999;
+.feedback-form label[for="feedback-user-name"],
+.feedback-form label[for="feedback-user-email"],
+.feedback-form label[for="feedback-user-comment"] {
+  position: absolute;
+  display: inline-block;
+  left: 15px;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+  -webkit-transition: color 0.3s, top 0.2s, font-size 0.2s;
+  transition: color 0.3s, top 0.2s, font-size 0.2s;
 }
 
-.feedback-form input[type="text"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.feedback-form input[type="text"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.feedback-form input[type="text"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.feedback-form label[for="feedback-user-name"] {
+  top: 10px;
 }
 
-.feedback-form input[type="email"]::-webkit-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.feedback-form label[for="feedback-user-email"] {
+  top: 74px;
 }
 
-.feedback-form input[type="email"]::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.feedback-form input[type="email"]:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.feedback-form input[type="email"]:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.feedback-form label[for="feedback-user-comment"] {
+  top: 136px;
 }
 
-.feedback-form textarea::-webkit-input-placeholder {
-  color:#999999;
+.feedback-form input:focus + label,
+.feedback-form input:valid + label,
+.feedback-form textarea:focus + label,
+.feedback-form textarea:valid + label {
   font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
 }
 
-.feedback-form textarea::-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 19+ */
-
-.feedback-form textarea:-moz-placeholder {
-  color:#999999;
-  font-weight: 400;
-}/* Firefox 18- */
-
-.feedback-form textarea:-ms-input-placeholder {
-  color:#999999;
-  font-weight: 400;
+.feedback-form input:focus + label,
+.feedback-form textarea:focus + label {
+  color: #5b9ddf;
 }
+
+.feedback-form input:valid + label,
+.feedback-form textarea:valid + label {
+  color: #999999;
+}
+
+.feedback-form input[type="text"]:focus + label,
+.feedback-form input[type="text"]:valid + label {
+  top: -15px;
+}
+
+.feedback-form input[type="email"]:focus + label,
+.feedback-form input[type="email"]:valid + label {
+  top: 48px;
+}
+
+.feedback-form textarea:focus + label,
+.feedback-form textarea:valid + label {
+  top: 112px;
+}
+
+/*!*Стилизация плейсхолдеров*!*/
+/*.feedback-form input[type="text"]::-webkit-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
+
+/*.feedback-form input[type="text"]::-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 19+ *!*/
+
+/*.feedback-form input[type="text"]:-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 18- *!*/
+
+/*.feedback-form input[type="text"]:-ms-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
+
+/*.feedback-form input[type="email"]::-webkit-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
+
+/*.feedback-form input[type="email"]::-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 19+ *!*/
+
+/*.feedback-form input[type="email"]:-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 18- *!*/
+
+/*.feedback-form input[type="email"]:-ms-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
+
+/*.feedback-form textarea::-webkit-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
+
+/*.feedback-form textarea::-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 19+ *!*/
+
+/*.feedback-form textarea:-moz-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}!* Firefox 18- *!*/
+
+/*.feedback-form textarea:-ms-input-placeholder {*/
+  /*color:#999999;*/
+  /*font-weight: 400;*/
+/*}*/
 
 .feedback-form .btn {
   width: 127px;
@@ -2140,43 +2206,43 @@ body > input[type="radio"] {
 
 
 
-/*!*Классы для js*!*/
+/*Классы для js*/
 
-/*.modal-content-show {*/
-  /*display: block;*/
-/*}*/
+.modal-content-show {
+  display: block;
+}
 
-/*.animation {*/
-  /*animation: bounce 0.6s;*/
-/*}*/
+.animation {
+  animation: bounce 0.6s;
+}
 
-/*.modal-error {*/
-  /*animation: shake 0.6s;*/
-/*}*/
+.modal-error {
+  animation: shake 0.6s;
+}
 
-/*@keyframes bounce {*/
-  /*0%   {*/
-    /*transform: translateY(-2000px);*/
-  /*}*/
-  /*70%  {*/
-    /*transform: translateY(30px);*/
-  /*}*/
-  /*90%  {*/
-    /*transform: translateY(-10px);*/
-  /*}*/
-  /*100% {*/
-    /*transform: translateY(0);*/
-  /*}*/
-/*}*/
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-/*@keyframes shake {*/
-  /*0%, 100% {*/
-    /*transform: translateX(0);*/
-  /*}*/
-  /*10%, 30%, 50%, 70%, 90% {*/
-    /*transform: translateX(-10px);*/
-  /*}*/
-  /*20%, 40%, 60%, 80% {*/
-    /*transform: translateX(10px);*/
-  /*}*/
-/*}*/
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
