@@ -58,12 +58,14 @@
           <div class="cart-order">
             <ul>
               <li>
+                <div class="delete"></div>
                 <img src="./img/cart-goods-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                 <span>Пломбир с апельсиновым джемом</span>
                 <span>1,5 кг х <span class="cart-order-price">200 руб.</span></span>
                 <span>300 руб.</span>
               </li>
               <li>
+                <div class="delete"></div>
                 <img src="./img/cart-goods-2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой<br>
                   из белого шоколада">
                 <span>Клубничный пломбир с присыпкой<br>
@@ -98,7 +100,10 @@
         </fieldset>
         <fieldset class="catalog-filters-price">
           <legend>Цена: 100 руб. – 500 руб.</legend>
-          <div class="toogle-1"><div class="toogle-2"></div></div>
+          <div class="toogle">
+            <div class="toogle-control-left"></div>
+            <div class="toogle-control-right"></div>
+          </div>
         </fieldset>
         <fieldset class="catalog-filters-fatness">
           <legend>Жирность</legend>
@@ -109,7 +114,7 @@
           <label for="to10">до 10%</label>
           <input type="radio" name="fatness" id="to30" value="to30">
           <label for="to30">до 30%</label>
-          <input type="radio" name="fatness" id="up30" value="up30">
+          <input type="radio" name="fatness" id="up30" value="up30" disabled>
           <label for="up30">выше 30%</label>
           </div>
         </fieldset>
@@ -124,11 +129,12 @@
           <label for="fruit">фрукты</label>
           <input type="checkbox" name="syrups" id="syrups">
           <label for="syrups">сиропы</label>
-          <input type="checkbox" name="jams" id="jams">
+          <input type="checkbox" name="jams" id="jams" disabled>
           <label for="jams">джемы</label>
           </div>
         </fieldset>
-        <button class="btn">Применить</button>
+        <!--<button class="btn">Применить</button>-->
+        <input class="btn" type="submit" name="btn" value="Применить">
       </form>
       <div class="catalog-goods">
         <div class="goods-card">
@@ -289,6 +295,7 @@
         </div>
       </div>
       <div class="catalog-page-numbers">
+        <a href="#" class="page-prew">Назад</a>
         <ul>
           <li class="page-active"><a href="#">1</a></li>
           <li><a href="#">2</a></li>
@@ -296,6 +303,7 @@
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
         </ul>
+        <a href="#" class="page-next active">Вперед</a>
       </div>
     </div>
   </main>
