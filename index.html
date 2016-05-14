@@ -216,35 +216,21 @@
         </div>
       </footer>
     </div>
-    <!--<div class="modal-content-overlay">-->
-      <!--<div class="modal-content">-->
-        <!--<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>-->
-        <!--<h2 class="modal-content-title">Мы обязательно вам ответим!</h2>-->
-        <!--<form class="feedback-form" method="post">-->
-          <!--<label for="feedback-user-name">Как вас зовут?</label>-->
-          <!--<input class="user-name" type="text" name="user-name" id="feedback-user-name" placeholder="Как вас зовут?">-->
-          <!--<label for="feedback-user-email">Ваша почта для ответа?</label>-->
-          <!--<input class="user-email" type="email" name="user-email" id="feedback-user-email" placeholder="Ваша почта для ответа?">-->
-          <!--<label for="feedback-user-comment">Напишите что-нибудь...</label>-->
-          <!--<textarea class="user-comment" name="user-comment" id="feedback-user-comment" placeholder="Напишите что-нибудь..."></textarea>-->
-          <!--<input class="btn" type="submit" value="Отправить">-->
-        <!--</form>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="login-hidden">-->
-      <!--<form class="login-form" method="post">-->
-        <!--<input class="user-email" type="email" name="user-email" placeholder="Электронная почта">-->
-        <!--<input class="user-password" type="password" name="user-password" placeholder="Пароль">-->
-        <!--<input class="btn" type="submit" value="Войти">-->
-        <!--<a class="restore" href="#">Забыли пароль?</a>-->
-        <!--<a class="restore" href="#">Новая регистрация</a>-->
-      <!--</form>-->
-    <!--</div>-->
-    <!--<div class="search-hidden">-->
-      <!--<form class="search">-->
-        <!--<input type="search" name="search" placeholder="Что ищем?">-->
-      <!--</form>-->
-    <!--</div>-->
+    <div class="modal-content-overlay">
+      <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal-content-title">Мы обязательно вам ответим!</h2>
+        <form class="feedback-form" method="post">
+          <input class="user-name" type="text" name="user-name" id="feedback-user-name" required>
+          <label for="feedback-user-name">Как вас зовут?</label>
+          <input class="user-email" type="email" name="user-email" id="feedback-user-email" required>
+          <label for="feedback-user-email">Ваша почта для ответа?</label>
+          <textarea class="user-comment" name="user-comment" id="feedback-user-comment" required></textarea>
+          <label for="feedback-user-comment">Напишите что-нибудь...</label>
+          <input class="btn" type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
   <script src="js/main.js"></script>
   </body>
 </html>
